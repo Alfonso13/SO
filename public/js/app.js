@@ -32,7 +32,7 @@ function init() {
 			};
 			var xhr = $.post("services/router.php", data);
 			xhr.done(function (response, message, http) {
-				if(http_response.status == 200) { 
+				if(http.status == 200) { 
 					alert("¡Mensaje Enviado! :)")	
 				}
 				else {
@@ -107,6 +107,11 @@ function init() {
 				var xhr = $.post("services/router.php", data);
 				xhr.done(function (response, message, http_response) {
 					if(http_response.status == 200) {
+						$("#ModalCotizacion").removeClass('visibility').addClass('no-visibility');
+						$('body')
+							.css({
+								overflow: 'auto'
+							});
 						alert("Enviado");
 					}
 					else {
