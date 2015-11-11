@@ -23,7 +23,7 @@ function init() {
 			var name = $("#contact-name").val();
 			var email = $("#contact-email").val();
 			var message =$("#contact-message").val();
-			
+
 			var data = {
 				name: name,
 				email: email,
@@ -33,34 +33,13 @@ function init() {
 			var xhr = $.post("services/router.php", data);
 			xhr.done(function (response, message, http) {
 				if(http.status == 200) { 
+					document.getElementById("form-contact-team").reset();
 					alert("¡Mensaje Enviado! :)")	
 				}
 				else {
 					alert("Intenta nuevamente :/");
 				}
 			});
-		}
-	});
-	$("#btn-suscribe").on('click', function sendSuscribe(event) {
-		event.preventDefault();
-		var valido = document.form_suscribe.checkValidity();
-		if(valido) {
-			document.form_suscribe.submit();
-		}
-	});
-
-	$("#btn-cotizar-paquete").on({
-		click: function click(event) {
-			event.preventDefault();
-			$("#ModalPaquete #formulario_cotizacion_paquete input, #ModalPaquete #formulario_cotizacion_paquete textarea").attr('disabled', 'disabled').attr('placeholder', 'Deshabilitado');
-			$("#ModalPaquete #formulario_cotizacion_paquete button").attr('disabled', 'disabled');
-			$("#ModalPaquete #selection-services a").removeClass('selectedService');
-			$("#ModalPaquete #selection-services label").css({
-				fontWeight: '300'
-			});
-			$("#ModalPaquete #formulario_cotizacion_paquete")[0].reset();
-			$("#ModalPaquete").removeClass('no-visibility').addClass('visibility');
-			$('body').css({overflow: 'hidden'});
 		}
 	});
 	$("button.cotizar").on({
@@ -104,9 +83,11 @@ function init() {
 					site: site,
 					route: '/cotizacion'
 				};
+
 				var xhr = $.post("services/router.php", data);
 				xhr.done(function (response, message, http_response) {
 					if(http_response.status == 200) {
+						document.formulario_cotizacion.reset();
 						$("#ModalCotizacion").removeClass('visibility').addClass('no-visibility');
 						$('body')
 							.css({
@@ -189,7 +170,7 @@ function init() {
 		}
 	});
 
-	document.formulario_cotizacion_paquete.addEventListener('invalid', function (element) {
+	document.formulario_cotizacion.addEventListener('invalid', function (element) {
 		var elemento = element.target;
 		if(elemento.tagName.toLowerCase() != 'fieldset') {
 			$(elemento).css({
@@ -198,7 +179,9 @@ function init() {
 			$(elemento).siblings("span").addClass("field-error");
 		}
 	}, true);
-	document.formulario_cotizacion_paquete.addEventListener('input', function input(element) {
+
+
+	document.formulario_cotizacion.addEventListener('input', function input(element) {
 		var target = $(element.target);
 		var siblings = target.siblings("span");
 		if(siblings.hasClass("field-error")) {
@@ -207,24 +190,6 @@ function init() {
 		}
 	}, false);
 
-	$("#icon-menu").on('click', function click(e) {
-		e.preventDefault();
-
-		if( $("#nav-mobile").hasClass('collapse-nav') ) {
-			$("#nav-mobile").removeClass('collapse-nav').addClass('no-collapse-nav');
-		}
-		else {
-			$("#nav-mobile").removeClass('no-collapse-nav').addClass('collapse-nav');
-		}
-	});
-	$("body").on('click', function (target) {
-		target = target.target;
-		if( !$(target).hasClass('icon-menu')  ) {
-			if($("#nav-mobile").hasClass('no-collapse-nav')) {
-				$("#nav-mobile").removeClass('no-collapse-nav').addClass('collapse-nav');
-			}
-		}
-	});
 };
 
 $(document).on('ready', init);
