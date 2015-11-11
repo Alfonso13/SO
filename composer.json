@@ -1,0 +1,22 @@
+{
+	"name": "Tikalopers/Mailgun",
+	"description": "Sitio web de tikalopers",
+	"license": "MIT",
+	"keywords": [
+		"mail"
+	],
+	"authors": [
+		{
+			"name": "Alfonso",
+			"email": "alfonso-13@live.com"
+		}
+	],
+	"require": {
+		"mailgun/mailgun-php": "1.7.*"
+	},
+	"autoload": {
+		"psr-4": {
+			"Acme\\": "src/Tikalopers/Mailgun/"
+		}	
+	}
+}

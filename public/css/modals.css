@@ -1,0 +1,214 @@
+@media only screen and (min-width: 780px) {
+  section.modal {
+    position: fixed;
+    z-index: 9999;
+    -webkit-box-sizing: border-box;
+    background: rgba(0,0,0,0.65);
+    overflow: hidden;
+    padding: 5% 28% !important;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    transition: all 0.5s ease;
+  }
+  section#ModalPaquete.modal {
+    padding: 2.5% 28% !important;
+  }
+  section#ModalPaquete.modal div.modal-container {
+    height: 600px !important;
+  }
+  section.modal div.modal-container {
+    background: #F1F1F2;
+    box-shadow: 1px 3px 15px #333;
+    height: 490px !important;
+    position: relative;
+    overflow: hidden !important;
+  }
+  section.modal div.modal-container form #container-form-service {
+      display: inline-block;
+      width: 86%;
+      text-align: center;
+  }
+  section.modal div.modal-container form fieldset {
+    margin: 0;
+    padding: 0 !important;
+    position: relative;
+  }
+  section.modal div.modal-container form > fieldset {
+    border-bottom:  1px solid gainsboro;
+  }
+  section.modal div.modal-container form #container-form-service fieldset {
+    display: inline-block;
+    padding: 0;
+    width: 46%;
+  }
+  /* #container-form-service */
+  section.modal div.modal-container form fieldset label {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+  }
+  section.modal div.modal-container form fieldset textarea {
+    border-radius: 3px;
+    border: 1px solid #E2E2E2;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 100px;
+    padding: 0.5em !important;
+    resize: none;
+    width: 100%;
+  }
+  section.modal div.modal-container form fieldset textarea + p {
+    color: inherit;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-top: 9px !important;
+  }
+  section.modal div.modal-container form #service {
+    background: transparent;
+    color: #4DB6AC;
+    font-weight: normal;
+    font-size: 1.2em;
+    width: 100%;
+  }
+  section.modal div.modal-container a.close {
+    display: inline-block !important;
+  }
+  section.modal div.modal-container #titulo_cotizacion {
+    background: #6670A7;
+    color: #fff;
+    padding: 1em 0 !important;
+  }
+  #selection-services ul li {
+    display: inline-block !important;
+  }
+  #selection-services ul li a{
+    border-radius: 100%;
+    border: 2px solid #4DB6AC;
+    text-decoration: none;
+    color: #3C515A;
+    margin: 0 0.5em;
+    font-size: 2em;
+    padding: 1em !important;
+  }
+}
+
+section.modal div.modal-container {
+  background: #F1F1F2;
+  box-shadow: 1px 3px 15px #333;
+  height: 440px;
+  position: relative;
+  overflow: auto;
+}
+
+section.modal div.modal-container form button {
+  background: #7986CB;
+  border: 0;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: 300;
+  margin-top: 0.2em;
+  outline: none;
+  padding: 0.5em 1.2em;
+  -webkit-transition: background 0.5s ease;
+  -o-transition: background 0.5s ease;
+  transition: background 0.5s ease;
+}
+section.modal div.modal-container a.close {
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  position: absolute;
+  right: 0.8em;
+  top: 0.6em;
+  z-index: 9999;
+}  
+section.modal {
+  position: fixed;
+  z-index: 9999;
+  -webkit-box-sizing: border-box;
+  background: rgba(0,0,0,0.65);
+  padding: 18% 5%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transition: all 0.5s ease;
+}
+section.modal div.modal-container #titulo_cotizacion {
+  background: #7986CB;
+  color: #fff;
+  padding: 1.9em 0 1em 0;
+}
+section.modal div.modal-container #cotizacion {
+  margin-top: 2em;
+}
+section.modal div.modal-container #titulo_cotizacion h3 {
+  font-size: 1.4em;
+  font-weight: normal;
+}
+section.modal div.modal-container form #container-form-service {
+  display: inline-block;
+  text-align: center;
+  width: 90%;
+}
+section.modal div.modal-container form fieldset textarea + p {
+  color: inherit;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-top: 9px !important;
+}
+section.modal div.modal-container form fieldset textarea {
+  border-radius: 3px;
+  border: 1px solid #E2E2E2;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0.5em !important;
+  resize: none;
+  width: 100%;
+}
+section.modal div.modal-container form #container-form-service fieldset input, section.modal div.modal-container form #container-form-service fieldset label {
+  display: block !important;
+  text-align: left;
+}
+section.modal div.modal-container form #container-form-service fieldset input {
+  font-size: 0.9em;
+  padding: 0.65em;
+  width: 95%;
+}
+section.modal div.modal-container form #container-form-service fieldset label {
+  font-size: 1em;
+  font-weight: 300;
+}
+section.modal div.modal-container form .container-buttons {
+  margin: 0.4em 0 !important;
+  padding: 0.4em;
+}
+#selection-services {
+  margin-top: 1em;
+}
+#selection-services ul li {
+  display: inline-block;
+}
+
+#selection-services ul li label {
+  font-weight: 300;
+}
+section.modal div.modal-container form fieldset input {
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #E2E2E2;
+  display: inline-block !important;
+  padding: 0.5em;
+}
+#selection-services ul li a{
+  border-radius: 100%;
+  border: 2px solid #4DB6AC;
+  text-decoration: none;
+  color: #3C515A;
+  margin: 0 0.5em;
+  font-size: 2em;
+  padding: 0.7em;
+}

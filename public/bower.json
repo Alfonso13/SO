@@ -1,0 +1,21 @@
+{
+  "name": "WebsiteTikalopers",
+  "version": "0.0.1",
+  "description": "A Website from Tikalopers",
+  "dependencies": {
+    "fullpage.js": "~2.6.9",
+    "jquery": "1.10.2",
+    "normalize.css": "~3.0.3"
+  },
+  "authors": [
+    "Alfonso13 <alfonso-13@live.com>, Maximiliano <mklogf@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

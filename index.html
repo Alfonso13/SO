@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+	<title>Artesanos de Occidente | Brindando oportunidades de negocio</title>
+	<meta name="description" content="" />
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,300italic,300,100italic,100,500,500italic,900italic,900,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="public/bower_components/normalize.css/normalize.css" />
+	<link rel="stylesheet" href="public/css/modals.css" />
+	<link rel="stylesheet" href="public/css/globals.css" />
+	<link rel="stylesheet" href="public/css/index.css" />
+	<link rel="stylesheet" href="public/css/media.css" />
+	<!-- End Google Analytics -->
+</head>
+<body id="container">
+	<section class="modal no-visibility" id="ModalCotizacion" >
+		<div class="modal-container relative">
+			<a class="close">X</a>
+			<div id="titulo_cotizacion">
+				<h3 class="no-margin">Artesanos de Occidente</h3>
+			</div>
+			<h3 class="align-center">
+				<h4 class="align-center" style="padding: 0 3em;">Artesanos de Occidente te dará el mejor servicio de asesoría para que tú puedas cumplir tus sueños</h4>
+			</h3>
+			<div id="cotizacion" class="align-center">
+				<form name="formulario_cotizacion">
+					<div id="container-form-service">
+						<fieldset>
+							<label>Nombre</label>
+							<input type="text" id="cotizacion_nombre" required />
+							<span class="align-center"></span>
+						</fieldset>
+						<fieldset>
+							<label>Correo</label>
+							<input type="email" id="cotizacion_correo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required />
+							<span class="align-center"></span>
+						</fieldset>
+						<fieldset>
+							<label>Empresa</label>
+							<input type="text" id="cotizacion_empresa" required />
+							<span class="align-center"></span>
+						</fieldset>
+						<fieldset>
+							<label>Sitio Web (si tuviera)</label>
+							<input type="url" id="cotizacion_sitio" />
+						</fieldset>
+					</div>
+					<div class="align-center" style="width: 90%;display: inline-block;text-align: left;width: 86%;">
+						<fieldset class="inline-block" style="margin: 0; padding: 0;width: 100%;">
+							<label class="block align-left" style="font-weight: 300;font-size: 1em;">Cuéntanos lo que necesitas</label>
+							<textarea id="cotizacion_mensaje" class="block no-padding"></textarea>
+						</fieldset>
+					</div>
+					<div class="align-center no-margin container-buttons">
+						<button id="btn-cotizar">ENVIAR</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+	<section class="modal no-visibility" id="ModalPaquete" >
+		<div class="modal-container">
+			<a class="close">X</a>
+			<div id="titulo_cotizacion">		
+				<p class="no-margin">¡Atréve a cambiar tu entorno!</p>
+			</div>
+			<div id="cotizacion" class="align-center">
+				<div id="selection-services">
+					<p class="align-center no-margin" style="margin-bottom: 0.4em !important;">Selecciona los servicios que deseas adquirir con nosotros</p>
+					<ul class="list-none no-margin no-padding">
+						<li class="item-service-selected">
+							<span data-service-id="0" class="inline-block icon-display"></span>
+							<label class="no-margin block">Sitio Web</label>
+						</li>
+						<li class="item-service-selected">
+							<span data-service-id="1" class="inline-block icon-mobile"></span>
+							<label class="no-margin block">App Móvil</label>
+						</li>
+						<li class="item-service-selected">
+							<span data-service-id="2" class="inline-block icon-bullhorn"></span>
+							<label class="block no-margin">Social Media</label>
+						</li>
+					</ul>
+				</div>
+				<form name="formulario_cotizacion_paquete" id="formulario_cotizacion_paquete">
+					<hr class="block" style="border: 1px solid #DEDEDE;margin-top: 1em;width: 90%;" />
+					<div id="container-form-service">
+						<fieldset>
+							<label>Nombre</label>
+							<input type="text" id="cotizacion_nombre" name="name" disabled placeholder='Deshabilitado' autofocus="autofocus" required />
+							<span class="align-center"></span>
+						</fieldset>
+						<fieldset>
+							<label>Correo</label>
+							<input type="email" name="email" placeholder='Deshabilitado' disabled required />
+							<span class="align-center"></span>
+						</fieldset>
+						<fieldset>
+							<label>Empresa</label>
+							<input type="text" name="company" placeholder='Deshabilitado' disabled required />
+							<span class="align-center"></span>
+						</fieldset>
+						<fieldset>
+							<label>Sitio Web (si tuviera)</label>
+							<input type="url" name="site" placeholder='Deshabilitado' disabled />
+						</fieldset>
+					</div>
+					<div class="align-center">
+						<fieldset class="inline-block no-margin no-padding">
+							<label class="block align-left">Cuéntanos lo que necesitas</label>
+							<textarea name="message" class="block no-padding" placeholder='Deshabilitado' disabled></textarea>
+							<!-- <p>¡OBTÉN TU SITIO WEB PERFECTO QUE ENCANTARÁ A TUS FANS!</p> -->
+						</fieldset>
+					</div>
+					<p class="align-center no-margin container-buttons">
+						<button class="hover no-margin" disabled>COTIZAR</button>
+					</p>
+				</form>
+			</div>
+		</div>
+	</section>
+	<div class="relative">
+		<header id="header">
+			<div id="container-header-top">
+				<div id="layout-header" class="relative">
+					<div id="container-logo" class="inline-block-middle">
+						<figure class="no-margin">
+							<a href="#">
+								<img src="public/img/Logo Artesanos.png" style="max-width: 100%;" alt="">
+							</a>
+						</figure>
+					</div>
+					<div class="inline-block-middle" id="icon-menu"><label class="icon-menu"></label></div>
+					<nav class="hidden">
+						<ul id="navigation" class="list-none">
+							<li class="border-right-menu">
+								<a href="#" data-role="header" data-hash="home">INICIO</a>
+							</li><li class="border-right-menu">
+								<a href="#" data-role="container-services" data-hash="servicios">SERVICIOS</a>
+							</li><li class="border-right-menu">
+								<a href="#" data-role="team" data-hash="nosotros">NOSOTROS</a>
+							</li><li>
+								<strong>
+									<a href="#" data-role="contact" style="font-weight: 800;" data-hash="contacto">CONTACTO</a>
+								</strong>
+							</li>
+						</ul>
+					</nav>
+				</div>			
+				<div id="nav-mobile" class="collapse-nav">
+					<nav>
+						<ul id="navigation-mobile" class="list-none no-padding">
+							<li>
+								<a href="#" class="no-underline block" data-role="header">INICIO</a>
+							</li><li>
+								<a href="#" class="no-underline block" data-role="container-services">SERVICIOS</a>
+							</li><li>
+								<a href="#" class="no-underline block" data-role="team">NOSOTROS</a>
+							</li><li>
+								<a href="#" class="no-underline block">BLOG</a>
+							</li><li>
+								<a href="#" data-role="contact" class="no-underline block">CONTACTO</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<section id="history-tikalopers">
+				<div class="align-left">
+					<h1 class="align-left inline-block">ARTESANOS DE OCCIDENTE</h1>
+				</div>
+				<h2 class="align-left no-margin">
+					Las intenciones para <strong>humanizar a la humanidad</strong> tienen que terminar en acciones concretas y tangibles.</h2>
+					<br />
+				<a href="#" id="btn_ser-parte" class="inline-block" data-role="container-services">SER PARTE</a>
+			</section>
+		</header>
+		<section id="container-we">
+			<div>
+				<h2 class="no-margin">POR QUÉ ARTESANOS DE OCCIDENTE</h2>
+				<p>
+					Artesanos de Occidente surge de la necesidad de lograr impulsar el crecimiento de los pequeños productores artesanales del país, lograndolo por medio de la colocación y comercialización de sus productos en el mercado internacional contando con el apoyo de las principales potencia económicas en la Unión Europea.
+				</p>
+				<p>
+					<strong>
+						En Artesanos de Occidente nos encargamos de que tus productos artesanales no conozcan fronteras
+					</strong>
+				</p>
+			</div>
+		</section>
+		<section id="container-services" class="align-left">
+			<h2 class="no-margin h2-title-block">PEQUEÑOS PRODUCTORES ARTESANALES</h2>
+			<div id="layout-services">
+				<article class="services">
+					<div class="relative">
+						<div>
+							<figure class="circle">
+								<span class="icon-earth"></span>
+							</figure>
+						</div>
+						<h3 class="no-margin">APOYO COMERCIAL EN EL EXTRANJERO</h3>
+						<p class="word-break align-left">
+							En Artesanos de Occidente te brindamos apoyo profesional para que tú puedas exportar tus productos artesanales hacía el extranjero.
+						</p>
+						<p class="no-margin word-break align-left">
+							<strong class="inline-block">Apoyamos a: </strong>
+							<ul class="list-none no-margin no-padding align-left">
+								<li>Textiles</li>
+								<li>Trajes típicos</li>
+								<li>Comidas envasadas</li>
+								<li>Pinturas</li>
+								<li>Productos locales</li>
+								<li>Café Orgánico</li>
+								<li>Otras diversidades de productos</li>
+							</ul>
+						</p>
+						<button data-services-id="0" class="cotizar">¡EMPEZAR!</button>
+					</div>
+				</article>
+			</div>
+		</section>
+		<section id="team" class="align-left">
+			<h2 class="no-margin h2-title-block">EQUIPO</h2>
+			<div class="align-center">
+				<article>
+					<div>
+						<figure class="circle no-margin" data-user="alfonso"></figure>
+					</div>
+					<h3 class="no-margin no-bold">ALFONSO PIEDRASANTA G.</h3>
+				</article>
+				<article>
+					<div>
+						<figure class="circle no-margin" data-user="marlon"></figure>
+					</div>
+					<h3 class="no-margin no-bold">GILBERTO V. CONDE GONZALEZ</h3>
+				</article>
+				<article>
+					<div>
+						<figure class="circle no-margin" data-user="marlon"></figure>
+					</div>
+					<h3 class="no-margin no-bold">MARLON MEJÍA O.</h3>
+				</article>
+				<article>
+					<div>
+						<figure class="circle no-margin" data-user="kevin"></figure>
+					</div>
+					<h3 class="no-margin no-bold">JAIRO URIAS CIFUENTES</h3>
+				</article>
+				<article>
+					<div>
+						<figure class="circle no-margin" data-user="kevin"></figure>
+					</div>
+					<h3 class="no-margin no-bold">RONES LEMCA</h3>
+				</article>
+				<article>
+					<div>
+						<figure class="circle no-margin" data-user="erick"></figure>
+					</div>
+					<h3 class="no-margin no-bold">ERICK REYNOSO GONZALEZ</h3>
+				</article>
+			</div>
+		</section>
+		<section id="cases-success" style="padding: 1em;" class="align-left">
+			<h2 class="no-margin h2-title-block">CASOS DE EXITO</h2>
+			<div class="align-center" style="margin-top: 2em;">
+				<article>
+					<div>
+						<figure>
+							<img src="public/img/case 1.jpg" alt="">
+						</figure>
+					</div>
+					<div>
+						<h3 class="no-margin">Artesanias del Alto</h3>
+						<p>
+							Artesanias del Alto es un pequeño productor del municipio San Francisco El Alto, Quetzaltenango.
+						</p>
+						<div class="buttons">
+							<a href="#">Saber más</a>
+							<a href="https://www.google.com" target="_blank">Sitio Web</a>
+						</div>
+					</div>
+				</article>
+				<article>
+					<div>
+						<figure>
+							<img src="public/img/case 1.jpg" alt="">
+						</figure>
+					</div>
+					<div>
+						<h3 class="no-margin">Textiles de Gumarcaj</h3>
+						<p>
+							Textiles de Gumarcaj es una productora de ropa ubicada en el departamento de Quiché
+						</p>
+						<div class="buttons">
+							<a href="#">Saber más</a>
+							<a href="https://www.google.com" target="_blank">Sitio Web</a>
+						</div>
+					</div>
+				</article>
+				<article>
+					<div>
+						<figure>
+							<img src="public/img/case 3.jpg" alt="">
+						</figure>
+					</div>
+					<div>
+						<h3 class="no-margin">Café de Los Altos</h3>
+						<p>
+							Café de Los Altos es una productora de café ubicada en Xela, Quetzaltenango
+						</p>
+						<div class="buttons">
+							<a href="#">Saber más</a>
+							<a href="https://www.google.com" target="_blank">Sitio Web</a>
+						</div>
+					</div>
+				</article>
+			</div>
+		</section>
+		<section id="contact" class="contact align-left relative">
+			<h2 class="no-margin h2-title-block">HABLANOS POR AQUÍ</h2>
+			<div id="social-media-contact">
+				<ul class="list-none no-margin no-padding align-center">
+					<li class="no-margin">
+						<h3 class="no-margin">Twitter</h3>
+						<a href="https://twitter.com/TIKALOPERS" target="_blank">@ArtesanosDeOccidente</a>
+					</li>
+					<li class="no-margin">
+						<h3 class="no-margin">Facebook</h3>
+						<a href="https://www.facebook.com/TIKALOPERS" target="_blank">ArtesanosDeOccidente</a>
+					</li>
+					<li>
+						<h3 class="no-margin">E-mail</h3>
+						<a href="mailto:tikalopers@gmail.com" target="_blank">team@artesanosdeoccidente.com</a>
+					</li>
+					<li>
+						<h3 class="no-margin">Skype</h3>
+						<a href="#">ArtesanosDeOccidente</a>
+					</li>
+				</ul>
+			</div>
+			<div id="phones">
+				<ul class="list-none no-margin no-padding align-center">
+					<li class="no-margin">
+						<h2>TELÉFONOS</h2>
+						<h3>Guatemala</h3>
+						<p class="no-margin">(502) 5929 7723</p>
+						<p class="no-margin">(502) 3246 3789</p>
+						<p class="no-margin">(502) 5429 6264</p>
+						<p class="no-margin">(502) 3246 3789</p>
+						<p class="no-margin">(502) 5747 6265</p>
+						<p class="no-margin">(502) 3055 8949</p>
+					</li>
+				</ul>
+			</div>
+			<div class="align-center">
+				<p>Ó ENVÍANOS UN CORREO POR AQUÍ</p>
+			</div>
+			<div id="form-contact" class="align-center">
+				<form class="inline-block" name="formulario_contacto" id="form-contact-team">
+					<fieldset>
+						<div id="container-inputs">
+							<div class="align-left">
+								<label>Nombre</label>
+								<input type="text" id="contact-name" name="name" required />
+								<span class="align-center"></span>
+							</div>
+							<div class="align-left">
+								<label for="email" id="contact-email">Correo</label>
+								<input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required />
+								<span class="align-center"></span>
+							</div>
+						</div>
+						<div class="align-left">
+							<label for="message">Mensaje</label>
+							<textarea id="contact-message" name="message" required></textarea>
+							<span class="align-center"></span>
+						</div>
+						<p class="align-center no-margin">
+							<button id="btn_enviar">ENVIAR</button>
+						</p>
+					</fieldset>
+				</form>
+			</div>
+		</section>
+		<footer class="align-left">
+			<h2 class="align-center no-margin">ARTESANOS DE OCCIDENTE</h2>
+			<p class="no-margin"><small><em>Ayudando a crecer al pequeño productor artesanal...</em></small></p>
+		</footer>
+	</div>
+	<script src="public/bower_components/jquery/jquery.js"></script>
+	<script src="public/lib/serializeObject.js"></script>
+	<script src="public/js/app.js"></script>
+</body>
+</html>
