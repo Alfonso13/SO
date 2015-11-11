@@ -115,32 +115,17 @@ function init() {
 	var headerOrgOffset = $("#layout-header").offset().top;
 
 	var a = 0;
-	$("#selection-services a").on('click', function click(e) {
-		e.preventDefault();
+	$("#navigation a").on('click', function navigation(element) {
+		if(element.target.getAttribute('data-role')) {
+			element.preventDefault();
+			var role = element.target.getAttribute('data-role');
+			if(role) {
+				var hash = element.target.getAttribute('data-hash');
+				var client = $("#"+role).offset();
 
-		if($(this).hasClass('selectedService')) {
-			$(this).removeClass('selectedService')
-			$(this).siblings().eq(0).css({
-				fontWeight: "300"
-			});
-		}
-		else {
-			$(this).addClass('selectedService')	
-			$(this).siblings().eq(0).css({
-				fontWeight: "500"
-			});
-		}
-
-		var children = $(this).parent().siblings().children('.selectedService');
-		if(children.length == 0 || ( !($(this).hasClass('selectedService')) && children.length == 1 ) ) {
-			$("#formulario_cotizacion_paquete input, #formulario_cotizacion_paquete textarea").attr('disabled', 'disabled').attr('placeholder', 'Deshabilitado');
-			$("#formulario_cotizacion_paquete input").eq(0).attr('autofocus','autofocus');
-			$("#formulario_cotizacion_paquete button").attr('disabled', 'disabled');
-		}
-		else {
-			$("#formulario_cotizacion_paquete input, #formulario_cotizacion_paquete textarea").removeAttr('disabled').removeAttr('placeholder');
-			$("#formulario_cotizacion_paquete input").eq(0).attr('autofocus', 'autofocus');
-			$("#formulario_cotizacion_paquete button").removeAttr('disabled');
+				$("html, body").stop().animate({scrollTop: client.top-60}, "1500", "swing");
+				window.location.hash = hash;
+			}
 		}
 	});
 	$("#formulario_cotizacion_paquete button").on('click', function click(event) {
